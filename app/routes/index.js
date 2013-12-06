@@ -1,40 +1,25 @@
-function getJSON(something) {
-  console.log("something is: ", something);
-  return new Ember.RSVP.Promise(function (resolve, reject) {
-    if (something == 'weather.json') {
-      Ember.run.later(function () {
-        console.log('from inside weather.json option')
-        resolve('some weather data');
-      }, 2000);
+import 'appkit/utils/ajax' as ajax;
 
-    }
+ajax.defineFixture('/weather', {
+  response: 'some weather data',
+  jqXHR: {},
+  textStatus: 'success'
+});
 
-    if (something == 'image.json') {
-      Ember.run.later(function () {
-        resolve('some image data');
-      }, 600);
-    }
-  });
-}
+ajax.defineFixture('/image', {
+  response: 'some image data',
+  jqXHR: {},
+  textStatus: 'success'
+});
 
 
 export default Ember.Route.extend({
   model: function () {
-
     var promises = {
-      weatherData: getJSON('weather.json'),
-      imageData: getJSON('image.json')
+      weatherData: ajax('/weather'),
+      imageData: ajax('/image')
     };
 
     return Ember.RSVP.hash(promises);
-  },
-
-  // actions: {
-  //   loading: function () {
-  //     // alert('data is being loaded, please wait');
-  //     console.log('data is being loaded, please wait');
-
-  //     return false;
-  //   }
-  // }
+  }
 });
