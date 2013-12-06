@@ -29,6 +29,7 @@ module.exports = function(config) {
       'karma-chrome-launcher',
       'karma-firefox-launcher',
       //'karma-safari-launcher'  // npm install karma-safari-launcher
+      'karma-growl-reporter'
     ],
 
     preprocessors: {
