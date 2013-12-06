@@ -2,16 +2,17 @@ function getJSON(something) {
   console.log("something is: ", something);
   return new Ember.RSVP.Promise(function (resolve, reject) {
     if (something == 'weather.json') {
-      setTimeout(function () {
+      Ember.run.later(function () {
         console.log('from inside weather.json option')
         resolve('some weather data');
       }, 2000);
+
     }
 
     if (something == 'image.json') {
-      setTimeout(function () {
+      Ember.run.later(function () {
         resolve('some image data');
-      }, 500);
+      }, 600);
     }
   });
 }
