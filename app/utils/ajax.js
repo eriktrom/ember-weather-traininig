@@ -1,4 +1,8 @@
 /* global ic */
-export default function ajax(){
-  return ic.ajax.apply(null, arguments);
-}
+
+export default ic.ajax;
+
+// broken when using ajax.defineFixture
+// export default function ajax(){
+//   return ic.ajax.apply(null, arguments);
+// }

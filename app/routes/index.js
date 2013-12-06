@@ -1,4 +1,5 @@
-import 'appkit/utils/ajax' as ajax;
+/*global ajax*/
+import ajax from 'appkit/utils/ajax';
 
 ajax.defineFixture('/weather', {
   response: 'some weather data',
@@ -11,7 +12,6 @@ ajax.defineFixture('/image', {
   jqXHR: {},
   textStatus: 'success'
 });
-
 
 export default Ember.Route.extend({
   model: function () {
