@@ -1,3 +1,8 @@
-Data from weather api: {{weatherData}}
-<br>
-Data from image api: {{imageData}}
+<h2>Data from weather api:</h2>
+
+<ul>
+  <li>Current Temp: {{temp}}</li>
+  <li>Pretty Data: {{prettyDate}}</li>
+  <li><img {{bind-attr src=weatherIcon}}></li>
+  <li>Wind Speed: {{windSpeed}}</li>
+</ul>
