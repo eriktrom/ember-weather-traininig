@@ -28,12 +28,12 @@ export default Ember.Route.extend({
     return Ember.RSVP.hash(promises);
   },
 
-  actions: {
-    loading: function () {
-      // alert('data is being loaded, please wait');
-      console.log('data is being loaded, please wait');
+  // actions: {
+  //   loading: function () {
+  //     // alert('data is being loaded, please wait');
+  //     console.log('data is being loaded, please wait');
 
-      return false;
-    }
-  }
+  //     return false;
+  //   }
+  // }
 });
