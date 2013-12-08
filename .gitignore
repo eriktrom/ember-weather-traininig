@@ -18,3 +18,4 @@ Thumbs.db
 /coverage/*
 
 app/utils/api-keys.js
+api-stub/api-keys.js

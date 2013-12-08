@@ -1,8 +1,9 @@
 var useFakeData = true;
 
-import apiKeys from 'appkit/utils/api-keys';
+var apiKeys = require('./api-keys');
 
-export default function (useRealData) {
+module.exports = function (useRealData) {
+
   // if useRealData flag in passed and is true, change the hosts for our url's
   useFakeData = useRealData ? false : useFakeData;
   var weatherApiHost, imageApiHost;
@@ -39,4 +40,4 @@ export default function (useRealData) {
     weatherForecastUrl: weatherForecastUrl,
     imageApiUrl: imageApiUrl
   };
-}
+};
