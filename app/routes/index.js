@@ -1,74 +1,39 @@
 /*global ajax*/
 import ajax from 'appkit/utils/ajax';
+
+import { getData } from 'appkit/utils/get-data';
+import fakeData from 'appkit/utils/fake-data';
+
+/**
+ * GET queries dont require oauth, but both wunderground and 500px do require
+ * registered api keys be sent in URL
+ */
 import apiKeys from 'appkit/utils/api-keys';
-import fakeWeatherData from 'appkit/utils/fake-weather-data';
 
-var FAKEWEATHERSERVER = true;
-var currentWeatherUrl = 'http://api.wunderground.com/api/' +
-                        apiKeys.wunderground +
-                        '/geolookup/conditions/q/WA/Seattle.json';
+// wunderground url w/ apiKey, will look like:
+// http://api.wunderground.com/api/asdfasdf/geolookup/conditions/q/WA/Seattle.json
+var weatherApiBaseUrl = 'http://api.wunderground.com/api/' +
+                        apiKeys.wunderground + '/';
 
-function getCurrentWeatherData() {
-  // TODO: use local storage to keep a incrementing counter, every 15 reloads,
-  // get real data, aka, set this to false, for a sanity check
-  // OR
-  // stub out use sinon
-  // OR
-  // ...
-  if (FAKEWEATHERSERVER) { return fakeWeatherData; }
+var currentWeatherUrl = weatherApiBaseUrl +
+                        'geolookup/conditions/q/WA/Seattle.json';
 
-  return new Ember.RSVP.Promise(function (resolve, reject) {
+var weatherForecastUrl = weatherApiBaseUrl +
+                         'forecast/q/WA/Seattle.json';
 
-    var settings = {
-      url : currentWeatherUrl,
-      dataType : "jsonp",
-      success: function(parsed_json) {
-        Ember.run(null, resolve(parsed_json));
-      },
-      error: function (error_thrown) {
-        Ember.run(null, reject(error_thrown));
-      }
-    };
 
-    Ember.$.ajax(settings);
-  });
-}
-
-// function getForecastData() {
-//   if (FAKEWEATHERSERVER) { return fakeWeatherData; }
-
-//   return new Ember.RSVP.Promise(function (resolve, reject) {
-//     Ember.$.ajax({
-//       url : 'http://api.wunderground.com/api/' + apiKeys.wunderground + '/geolookup/conditions/q/WA/Seattle.json',
-//       dataType : "jsonp",
-//       success : function(parsed_json) {
-//         resolve(parsed_json);
-//       }
-//     });
-//   });
-// }
-
-ajax.defineFixture('/weather', {
-  response: 'some weather data',
-  jqXHR: {},
-  textStatus: 'success'
-});
-
-ajax.defineFixture('/image', {
-  response: 'some image data',
-  jqXHR: {},
-  textStatus: 'success'
-});
-
+// 500px url w/ consumer_key query params, will look like:
+// https://api.500px.com/v1/photos/search?term=seattle?consumer_key=asdfasdf
+var imageApiUrl =
+  'https://api.500px.com/v1/photos/search?term=seattle&consumer_key=' +
+  apiKeys['500px'];
 
 export default Ember.Route.extend({
   model: function () {
-    var promises = {
-      weatherData: getCurrentWeatherData(),
-      // weatherForcastData: getForecastData(),
-      imageData: ajax('/image')
-    };
-
-    return Ember.RSVP.hash(promises);
+    return Ember.RSVP.hash({
+      weatherData: getData(currentWeatherUrl, fakeData.currentWeather),
+      weatherForcastData: getData(currentWeatherUrl, fakeData.weatherForcastData),
+      imageData: getData(imageApiUrl, fakeData.imageData)
+    });
   }
 });
