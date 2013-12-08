@@ -25,7 +25,8 @@ module.exports = function (useRealData) {
   var weatherForecasSuffix = 'forecast/q/WA/Seattle.json';
 
   // TODO: try putting consumer_key in the header
-  var imageApiSuffix = '/v1/photos/search?term=seattle&consumer_key=' + apiKeys['500px']
+  var imageApiSuffix = '/v1/photos/search';
+  // var imageApiSuffix = '/v1/photos/search?term=seattle&consumer_key=' + apiKeys['500px'];
 
   var weatherApiBaseUrl = weatherApiHost + '/api/' + apiKeys.wunderground + '/';
   // http://api.wunderground.com/api/asdfasdf/geolookup/conditions/q/WA/Seattle.json

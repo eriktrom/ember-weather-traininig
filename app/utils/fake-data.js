@@ -1,6 +1,6 @@
 export default {
 
-  currentWeather: {
+  weatherCurrentData: {
     "response":{
       "version":"0.1",
       "termsofService":"http://www.wunderground.com/weather/api/d/terms.html",
@@ -475,7 +475,7 @@ export default {
     }
   },
 
-  forecastWeather: {
+  weatherForecastData: {
     "response": {
         "version": "0.1",
         "termsofService": "http://www.wunderground.com/weather/api/d/terms.html",
@@ -864,7 +864,7 @@ export default {
     }
   },
 
-  imageData: {
+  imageApiData: {
     "current_page": 1,
     "total_pages": 1394,
     "total_items": 27869,

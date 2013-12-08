@@ -1,7 +1,8 @@
 export default Ember.Component.extend({
-  imageData: null,
-  weatherData: null,
-  currentInfo: Ember.computed.oneWay('weatherData.current_observation'),
+  imageApiData: null,
+  weatherCurrentData: null,
+  weatherForcastData: null,
+  currentInfo: Ember.computed.oneWay('weatherCurrentData.current_observation'),
 
   tagName: 'my-weather',
   attributeBindings: ['style'],

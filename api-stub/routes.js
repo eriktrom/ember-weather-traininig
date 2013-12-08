@@ -1,51 +1,26 @@
-/*globals require*/
 var fakeData = require('./fake-data');
 
-var weatherCurrentUrl = require('./api-url-lookup').weatherCurrentUrl;
-var weatherForecastUrl = require('./api-url-lookup').weatherForecastUrl;
-var imageApiUrl = require('./api-url-lookup').imageApiUrl;
+var weatherCurrentUrl = require('./api-url-lookup')(false).weatherCurrentUrl;
+var weatherForecastUrl = require('./api-url-lookup')(false).weatherForecastUrl;
+var imageApiUrl = require('./api-url-lookup')(false).imageApiUrl;
 
-module.exports = function(server) {
+module.exports = function(app) {
 
-  // Create an API namespace, so that the root does not
-  // have to be repeated for each end point.
+  console.log('weatherCurrentUrl is: ', weatherCurrentUrl);
+  console.log('weatherForecastUrl is: ', weatherForecastUrl);
+  console.log('imageApiUrl is: ', imageApiUrl);
 
-  server.get(weatherCurrentUrl, function (req, res) {
-    res.send(fakeData.currentWeather);
+  app.get(weatherCurrentUrl, function (req, res) {
+    res.send(fakeData.weatherCurrentData);
   });
 
-  server.get(weatherForecastUrl, function (req, res) {
-    res.send(fakeData.forecastWeather);
+  app.get(weatherForecastUrl, function (req, res) {
+    res.send(fakeData.weatherForecastData);
   });
 
-  server.get(imageData, function (req, res) {
-    res.send(fakeData.imageData);
+  app.get(imageApiUrl, function (req, res) {
+    res.send(fakeData.imageApiData);
   });
 
-	// server.namespace('/api', function() {
-
-	// 	// Return fixture data for '/api/posts/:id'
-	// 	server.get('/posts/:id', function(req, res) {
-	// 		var post = {
-	// 				  "post": {
-	// 				    "id": 1,
-	// 				    "title": "Rails is omakase",
-	// 				    "comments": ["1", "2"],
-	// 				    "user" : "dhh"
-	// 				  },
-
-	// 				  "comments": [{
-	// 				    "id": "1",
-	// 				    "body": "Rails is unagi"
-	// 				  }, {
-	// 				    "id": "2",
-	// 				    "body": "Omakase O_o"
-	// 				  }]
-	// 				};
-
-	// 		res.send(post);
-	// 	});
-
-	// });
 
 };
