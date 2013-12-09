@@ -1,0 +1,435 @@
+{
+  "response": {
+  "version":"0.1",
+  "termsofService":"http://www.wunderground.com/weather/api/d/terms.html",
+  "features": {
+  "geolookup": 1
+  ,
+  "conditions": 1
+  }
+	}
+		,	"location": {
+		"type":"CITY",
+		"country":"US",
+		"country_iso3166":"US",
+		"country_name":"USA",
+		"state":"WA",
+		"city":"Seattle",
+		"tz_short":"PST",
+		"tz_long":"America/Los_Angeles",
+		"lat":"47.61167908",
+		"lon":"-122.33325958",
+		"zip":"98101",
+		"magic":"1",
+		"wmo":"99999",
+		"l":"/q/zmw:98101.1.99999",
+		"requesturl":"US/WA/Seattle.html",
+		"wuiurl":"http://www.wunderground.com/US/WA/Seattle.html",
+		"nearby_weather_stations": {
+		"airport": {
+		"station": [
+		{ "city":"Seattle Boeing", "state":"WA", "country":"US", "icao":"KBFI", "lat":"47.52999878", "lon":"-122.30197144" },
+		{ "city":"Renton", "state":"WA", "country":"US", "icao":"KRNT", "lat":"47.49313736", "lon":"-122.21575165" },
+		{ "city":"Seattle", "state":"WA", "country":"US", "icao":"KSEA", "lat":"47.44469070", "lon":"-122.31436920" },
+		{ "city":"Everett", "state":"WA", "country":"US", "icao":"KPAE", "lat":"47.90700150", "lon":"-122.28158569" }
+		]
+		}
+		,
+		"pws": {
+		"station": [
+		{
+		"neighborhood":"Herrera, Inc.",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT187",
+		"lat":47.616558,
+		"lon":-122.341240,
+		"distance_km":0,
+		"distance_mi":0
+		},
+		{
+		"neighborhood":"Capitol Hill",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT169",
+		"lat":47.622158,
+		"lon":-122.317497,
+		"distance_km":1,
+		"distance_mi":0
+		},
+		{
+		"neighborhood":"Queen Anne - Southern Exposure",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT116",
+		"lat":47.626808,
+		"lon":-122.353851,
+		"distance_km":2,
+		"distance_mi":1
+		},
+		{
+		"neighborhood":"Queen Anne",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT200",
+		"lat":47.640743,
+		"lon":-122.351410,
+		"distance_km":3,
+		"distance_mi":2
+		},
+		{
+		"neighborhood":"Eastlake on Lake Union",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT220",
+		"lat":47.643906,
+		"lon":-122.327972,
+		"distance_km":3,
+		"distance_mi":2
+		},
+		{
+		"neighborhood":"Queen Anne - Toddster weather",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT92",
+		"lat":47.642536,
+		"lon":-122.367249,
+		"distance_km":4,
+		"distance_mi":2
+		},
+		{
+		"neighborhood":"West Seattle (Two Dogs Observatory)",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT155",
+		"lat":47.586651,
+		"lon":-122.383881,
+		"distance_km":4,
+		"distance_mi":2
+		},
+		{
+		"neighborhood":"University District",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT109",
+		"lat":47.648273,
+		"lon":-122.297913,
+		"distance_km":4,
+		"distance_mi":2
+		},
+		{
+		"neighborhood":"Wallingford",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT167",
+		"lat":47.655922,
+		"lon":-122.327896,
+		"distance_km":4,
+		"distance_mi":2
+		},
+		{
+		"neighborhood":"Fremont",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT14",
+		"lat":47.655811,
+		"lon":-122.355141,
+		"distance_km":5,
+		"distance_mi":3
+		},
+		{
+		"neighborhood":"Queen Anne - Western Exposure",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT211",
+		"lat":47.651688,
+		"lon":-122.373314,
+		"distance_km":5,
+		"distance_mi":3
+		},
+		{
+		"neighborhood":"Alon\u0027s Fremont/Ballard Neighbourhood",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT213",
+		"lat":47.658245,
+		"lon":-122.360519,
+		"distance_km":5,
+		"distance_mi":3
+		},
+		{
+		"neighborhood":"Alki",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT229",
+		"lat":47.582603,
+		"lon":-122.394569,
+		"distance_km":5,
+		"distance_mi":3
+		},
+		{
+		"neighborhood":"Magnolia",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT208",
+		"lat":47.643829,
+		"lon":-122.391907,
+		"distance_km":5,
+		"distance_mi":3
+		},
+		{
+		"neighborhood":"Phinney Ridge",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT210",
+		"lat":47.662998,
+		"lon":-122.356003,
+		"distance_km":5,
+		"distance_mi":3
+		},
+		{
+		"neighborhood":"Wallingford",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT221",
+		"lat":47.666306,
+		"lon":-122.335815,
+		"distance_km":6,
+		"distance_mi":3
+		},
+		{
+		"neighborhood":"Magnolia - MaxHome",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT142",
+		"lat":47.645866,
+		"lon":-122.399231,
+		"distance_km":6,
+		"distance_mi":3
+		},
+		{
+		"neighborhood":"Magnolia",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT75",
+		"lat":47.640396,
+		"lon":-122.405052,
+		"distance_km":6,
+		"distance_mi":3
+		},
+		{
+		"neighborhood":"Magnolia, Seattle",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT108",
+		"lat":47.648968,
+		"lon":-122.396111,
+		"distance_km":6,
+		"distance_mi":3
+		},
+		{
+		"neighborhood":"SE Green Lake",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT58",
+		"lat":47.669079,
+		"lon":-122.334999,
+		"distance_km":6,
+		"distance_mi":3
+		},
+		{
+		"neighborhood":"Ballard - West Woodland",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT153",
+		"lat":47.666016,
+		"lon":-122.369255,
+		"distance_km":6,
+		"distance_mi":3
+		},
+		{
+		"neighborhood":"Greenlake East",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT181",
+		"lat":47.674290,
+		"lon":-122.329010,
+		"distance_km":6,
+		"distance_mi":4
+		},
+		{
+		"neighborhood":"Phinney Ridge",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT223",
+		"lat":47.672501,
+		"lon":-122.359802,
+		"distance_km":7,
+		"distance_mi":4
+		},
+		{
+		"neighborhood":"Ballard",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT148",
+		"lat":47.673744,
+		"lon":-122.369766,
+		"distance_km":7,
+		"distance_mi":4
+		},
+		{
+		"neighborhood":"Bryant",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT180",
+		"lat":47.670841,
+		"lon":-122.282814,
+		"distance_km":7,
+		"distance_mi":4
+		},
+		{
+		"neighborhood":"Bryant",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT12",
+		"lat":47.674164,
+		"lon":-122.288200,
+		"distance_km":7,
+		"distance_mi":4
+		},
+		{
+		"neighborhood":"hillman city",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT206",
+		"lat":47.551701,
+		"lon":-122.281097,
+		"distance_km":7,
+		"distance_mi":4
+		},
+		{
+		"neighborhood":"Ballard Playground",
+		"city":"Seattle",
+		"state":"WA",
+		"country":"US",
+		"id":"KWASEATT150",
+		"lat":47.673145,
+		"lon":-122.393341,
+		"distance_km":8,
+		"distance_mi":4
+		}
+		]
+		}
+		}
+	}
+  ,	"current_observation": {
+		"image": {
+		"url":"http://icons-ak.wxug.com/graphics/wu2/logo_130x80.png",
+		"title":"Weather Underground",
+		"link":"http://www.wunderground.com"
+		},
+		"display_location": {
+		"full":"Seattle, WA",
+		"city":"Seattle",
+		"state":"WA",
+		"state_name":"Washington",
+		"country":"US",
+		"country_iso3166":"US",
+		"zip":"98101",
+		"magic":"1",
+		"wmo":"99999",
+		"latitude":"47.61167908",
+		"longitude":"-122.33325958",
+		"elevation":"63.00000000"
+		},
+		"observation_location": {
+		"full":"Herrera, Inc., Seattle, Washington",
+		"city":"Herrera, Inc., Seattle",
+		"state":"Washington",
+		"country":"US",
+		"country_iso3166":"US",
+		"latitude":"47.616558",
+		"longitude":"-122.341240",
+		"elevation":"270 ft"
+		},
+		"estimated": {
+		},
+		"station_id":"KWASEATT187",
+		"observation_time":"Last Updated on December 9, 3:14 AM PST",
+		"observation_time_rfc822":"Mon, 09 Dec 2013 03:14:29 -0800",
+		"observation_epoch":"1386587669",
+		"local_time_rfc822":"Mon, 09 Dec 2013 03:14:30 -0800",
+		"local_epoch":"1386587670",
+		"local_tz_short":"PST",
+		"local_tz_long":"America/Los_Angeles",
+		"local_tz_offset":"-0800",
+		"weather":"Scattered Clouds",
+		"temperature_string":"26.8 F (-2.9 C)",
+		"temp_f":26.8,
+		"temp_c":-2.9,
+		"relative_humidity":"66%",
+		"wind_string":"Calm",
+		"wind_dir":"ESE",
+		"wind_degrees":118,
+		"wind_mph":0.0,
+		"wind_gust_mph":"4.0",
+		"wind_kph":0,
+		"wind_gust_kph":"6.4",
+		"pressure_mb":"1036",
+		"pressure_in":"30.60",
+		"pressure_trend":"0",
+		"dewpoint_string":"17 F (-8 C)",
+		"dewpoint_f":17,
+		"dewpoint_c":-8,
+		"heat_index_string":"NA",
+		"heat_index_f":"NA",
+		"heat_index_c":"NA",
+		"windchill_string":"27 F (-3 C)",
+		"windchill_f":"27",
+		"windchill_c":"-3",
+		"feelslike_string":"27 F (-3 C)",
+		"feelslike_f":"27",
+		"feelslike_c":"-3",
+		"visibility_mi":"10.0",
+		"visibility_km":"16.1",
+		"solarradiation":"0",
+		"UV":"0","precip_1hr_string":"0.00 in ( 0 mm)",
+		"precip_1hr_in":"0.00",
+		"precip_1hr_metric":" 0",
+		"precip_today_string":"0.00 in (0 mm)",
+		"precip_today_in":"0.00",
+		"precip_today_metric":"0",
+		"icon":"partlycloudy",
+		"icon_url":"http://icons-ak.wxug.com/i/c/k/nt_partlycloudy.gif",
+		"forecast_url":"http://www.wunderground.com/US/WA/Seattle.html",
+		"history_url":"http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=KWASEATT187",
+		"ob_url":"http://www.wunderground.com/cgi-bin/findweather/getForecast?query=47.616558,-122.341240"
+	}
+}
