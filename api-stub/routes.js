@@ -1,22 +1,23 @@
-var fakeData = require('./fake-data');
+var request = require('request');
+var apiUrlLookup = require('./api-url-lookup');
+var fs = require('fs');
 
-var weatherCurrentUrl = '/weather-current';
-var weatherForecastUrl = '/weather-forecast';
-var imageApiUrl = '/image-api';
+var path = require('path');
 
 module.exports = function(app) {
 
-  app.get(weatherCurrentUrl, function (req, res) {
-    res.send(fakeData.weatherCurrentData);
+	app.get('/weather-current', function (req, res) {
+		request.get(apiUrlLookup.weatherCurrentUrl).pipe(res);
+		// TODO: read a 'recording' of data stored in a file instead of directly from
+		// service. Update recording every 24 hours based on fs.stat modified timestamp
+	});
+
+  app.get('/weather-forecast', function (req, res) {
+    request.get(apiUrlLookup.weatherForecastUrl).pipe(res);
   });
 
-  app.get(weatherForecastUrl, function (req, res) {
-    res.send(fakeData.weatherForecastData);
+  app.get('/image-api', function (req, res) {
+    request.get(apiUrlLookup.imageApiUrl).pipe(res);
   });
-
-  app.get(imageApiUrl, function (req, res) {
-    res.send(fakeData.imageApiData);
-  });
-
 
 };
